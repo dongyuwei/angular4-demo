@@ -5,6 +5,9 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+import { CommentModule } from './comments/comments.module';
+import { EmitterService } from './emitter.service';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -12,9 +15,11 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+
+    CommentModule
   ],
-  providers: [],
+  providers: [EmitterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
