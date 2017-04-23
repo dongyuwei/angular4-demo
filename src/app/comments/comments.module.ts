@@ -1,6 +1,6 @@
-import { NgModule }       from '@angular/core';
-import { BrowserModule }  from '@angular/platform-browser';
-import { FormsModule }    from '@angular/forms';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 
 import { CommentBoxComponent } from './components/comment-box.component';
@@ -16,9 +16,8 @@ import { CommentService } from './services/comment.service';
   imports: [
     BrowserModule,
     FormsModule,
-     HttpModule,
-    JsonpModule,
-    
+    HttpModule,
+    JsonpModule
   ],
   declarations: [
     CommentBoxComponent,
@@ -28,17 +27,17 @@ import { CommentService } from './services/comment.service';
   ],
 
   providers: [
-      CommentService
+    CommentService
   ],
 
-  exports:[
+  exports: [
     CommentBoxComponent,
     CommentFormComponent,
     CommentListComponent,
     CommentComponent
   ]
-  
+
 })
-export class CommentModule {
-}
+
+export class CommentModule {}
 
